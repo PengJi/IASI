@@ -1,3 +1,6 @@
+# IASI
+Insects Awaken SQL Instructor
+
 # parser 
 [tidb parser](https://github.com/pingcap/parser)  
 [soar](https://github.com/XiaoMi/soar)  
@@ -10,6 +13,7 @@
 # scenes
 1. 如何防止业务的一条SQL把数据库打挂(cpu打满、I/O打满)
 2. 特定查询的优化。现在所有的查询都是走的统一的框架，生成一个AST，以此执行，但实际对于一些特定查询，譬如 select count(*)，完全可以将AST压扁，让其直接跟 engine 交互，得到数据，快速返回。
+3. 自动处理SQL qps达到某一阈值，自动kill。
 
 # service
 1. 启发式建议
