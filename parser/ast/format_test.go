@@ -5,8 +5,9 @@ import (
 	"fmt"
 
 	. "github.com/pingcap/check"
-	"github.com/pingcap/parser"
-	"github.com/pingcap/parser/ast"
+
+	"github.com/pengji/IASI/parser"
+	"github.com/pengji/IASI/parser/ast"
 )
 
 var _ = Suite(&testAstFormatSuite{})

@@ -19,9 +19,9 @@ import (
 	"strings"
 
 	"github.com/pingcap/errors"
-	. "github.com/pingcap/parser/format"
-	"github.com/pingcap/parser/model"
-	"github.com/pingcap/parser/types"
+	. "github.com/pengji/IASI/parser/format"
+	"github.com/pengji/IASI/parser/model"
+	"github.com/pengji/IASI/parser/types"
 )
 
 var (

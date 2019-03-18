@@ -15,7 +15,8 @@ package ast_test
 
 import (
 	. "github.com/pingcap/check"
-	. "github.com/pingcap/parser/ast"
+
+	. "github.com/pengji/IASI/parser/ast"
 	_ "github.com/pingcap/tidb/types/parser_driver"
 )
 

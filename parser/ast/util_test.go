@@ -18,10 +18,12 @@ import (
 	"strings"
 
 	. "github.com/pingcap/check"
-	"github.com/pingcap/parser"
-	. "github.com/pingcap/parser/ast"
-	. "github.com/pingcap/parser/format"
-	"github.com/pingcap/tidb/types/parser_driver"
+	//"github.com/pingcap/tidb/types/parser_driver"
+	"github.com/pengji/IASI/parser/parser_driver"
+
+	"github.com/pengji/IASI/parser"
+	. "github.com/pengji/IASI/parser/ast"
+	. "github.com/pengji/IASI/parser/format"
 )
 
 var _ = Suite(&testCacheableSuite{})

@@ -15,7 +15,8 @@ package ast_test
 
 import (
 	. "github.com/pingcap/check"
-	. "github.com/pingcap/parser/ast"
+
+	. "github.com/pengji/IASI/parser/ast"
 )
 
 var _ = Suite(&testDMLSuite{})

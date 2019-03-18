@@ -19,10 +19,11 @@ import (
 	"strings"
 
 	"github.com/pingcap/errors"
-	"github.com/pingcap/parser/auth"
-	. "github.com/pingcap/parser/format"
-	"github.com/pingcap/parser/model"
-	"github.com/pingcap/parser/mysql"
+
+	"github.com/pengji/IASI/parser/auth"
+	. "github.com/pengji/IASI/parser/format"
+	"github.com/pengji/IASI/parser/model"
+	"github.com/pengji/IASI/parser/mysql"
 )
 
 var (

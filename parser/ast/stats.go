@@ -15,8 +15,9 @@ package ast
 
 import (
 	"github.com/pingcap/errors"
-	. "github.com/pingcap/parser/format"
-	"github.com/pingcap/parser/model"
+
+	. "github.com/pengji/IASI/parser/format"
+	"github.com/pengji/IASI/parser/model"
 )
 
 var (
