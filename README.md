@@ -9,6 +9,7 @@ Insects Awaken SQL Instructor
 # service
 1. 启发式建议
 2. 索引建议
+3. sql改写
 3. explain分析
 4. sql格式化
 
