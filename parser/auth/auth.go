@@ -20,8 +20,9 @@ import (
 	"fmt"
 
 	"github.com/pingcap/errors"
-	. "github.com/pingcap/parser/format"
-	"github.com/pingcap/parser/terror"
+
+	. "github.com/pengji/IASI/parser/format"
+	"github.com/pengji/IASI/parser/terror"
 )
 
 // UserIdentity represents username and hostname.

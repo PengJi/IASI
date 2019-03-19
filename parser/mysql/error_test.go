@@ -14,58 +14,24 @@
 package mysql
 
 import (
-	"errors"
-	"fmt"
+	. "github.com/pingcap/check"
 )
 
-// Portable analogs of some common call errors.
-var (
-	ErrBadConn       = errors.New("connection was bad")
-	ErrMalformPacket = errors.New("malform packet error")
-)
+var _ = Suite(&testSQLErrorSuite{})
 
-// SQLError records an error information, from executing SQL.
-type SQLError struct {
-	Code    uint16
-	Message string
-	State   string
+type testSQLErrorSuite struct {
 }
 
-// Error prints errors, with a formatted string.
-func (e *SQLError) Error() string {
-	return fmt.Sprintf("ERROR %d (%s): %s", e.Code, e.State, e.Message)
-}
+func (s *testSQLErrorSuite) TestSQLError(c *C) {
+	e := NewErrf(ErrNoDB, "no db error")
+	c.Assert(len(e.Error()), Greater, 0)
 
-// NewErr generates a SQL error, with an error code and default format specifier defined in MySQLErrName.
-func NewErr(errCode uint16, args ...interface{}) *SQLError {
-	e := &SQLError{Code: errCode}
+	e = NewErrf(0, "customized error")
+	c.Assert(len(e.Error()), Greater, 0)
 
-	if s, ok := MySQLState[errCode]; ok {
-		e.State = s
-	} else {
-		e.State = DefaultMySQLState
-	}
+	e = NewErr(ErrNoDB)
+	c.Assert(len(e.Error()), Greater, 0)
 
-	if format, ok := MySQLErrName[errCode]; ok {
-		e.Message = fmt.Sprintf(format, args...)
-	} else {
-		e.Message = fmt.Sprint(args...)
-	}
-
-	return e
-}
-
-// NewErrf creates a SQL error, with an error code and a format specifier.
-func NewErrf(errCode uint16, format string, args ...interface{}) *SQLError {
-	e := &SQLError{Code: errCode}
-
-	if s, ok := MySQLState[errCode]; ok {
-		e.State = s
-	} else {
-		e.State = DefaultMySQLState
-	}
-
-	e.Message = fmt.Sprintf(format, args...)
-
-	return e
+	e = NewErr(0, "customized error")
+	c.Assert(len(e.Error()), Greater, 0)
 }

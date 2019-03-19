@@ -19,9 +19,9 @@ import (
 	"time"
 
 	"github.com/pingcap/errors"
-	"github.com/pingcap/parser/auth"
-	"github.com/pingcap/parser/mysql"
-	"github.com/pingcap/parser/types"
+	"github.com/pengji/IASI/parser/auth"
+	"github.com/pengji/IASI/parser/mysql"
+	"github.com/pengji/IASI/parser/types"
 	"github.com/pingcap/tipb/go-tipb"
 )
 

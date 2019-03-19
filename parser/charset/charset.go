@@ -17,7 +17,8 @@ import (
 	"strings"
 
 	"github.com/pingcap/errors"
-	"github.com/pingcap/parser/mysql"
+
+	"github.com/pengji/IASI/parser/mysql"
 )
 
 // Charset is a charset.

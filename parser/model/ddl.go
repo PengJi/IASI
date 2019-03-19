@@ -21,7 +21,8 @@ import (
 	"time"
 
 	"github.com/pingcap/errors"
-	"github.com/pingcap/parser/terror"
+
+	"github.com/pengji/IASI/parser/terror"
 )
 
 // ActionType is the type for DDL action.

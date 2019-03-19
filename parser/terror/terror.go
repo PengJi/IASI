@@ -19,8 +19,9 @@ import (
 	"strconv"
 
 	"github.com/pingcap/errors"
-	"github.com/pingcap/parser/mysql"
 	log "github.com/sirupsen/logrus"
+
+	"github.com/pengji/IASI/parser/mysql"
 )
 
 // Global error instances.

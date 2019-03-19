@@ -17,9 +17,10 @@ import (
 	"testing"
 
 	. "github.com/pingcap/check"
-	"github.com/pingcap/parser/charset"
-	"github.com/pingcap/parser/mysql"
 	"github.com/pingcap/tidb/util/testleak"
+
+	"github.com/pengji/IASI/parser/charset"
+	"github.com/pengji/IASI/parser/mysql"
 )
 
 func TestT(t *testing.T) {
