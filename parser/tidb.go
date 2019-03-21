@@ -1,13 +1,14 @@
-package example
+package parser
 
 import (
 	"encoding/json"
 	"fmt"
+
 	"github.com/kr/pretty"
+	_ "github.com/pingcap/tidb/types/parser_driver"
+
 	"github.com/pingcap/parser"
 	"github.com/pingcap/parser/ast"
-
-	_ "github.com/pingcap/tidb/types/parser_driver"
 )
 
 // 语法解析
