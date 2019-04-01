@@ -37,6 +37,7 @@ func StmtNode2JSON(sql, charset, collation string) string {
 		fmt.Println(err)
 	} else {
 		b, err := json.MarshalIndent(tree, "", "  ")
+		//b, err := json.Marshal(tree)
 		if err != nil {
 			fmt.Println(err)
 		} else {
